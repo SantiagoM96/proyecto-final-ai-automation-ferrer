@@ -1261,16 +1261,8 @@
     },
     {
       "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "828e7190-7afd-40e8-baa6-ea01468bd121",
-              "name": "decision_ia",
-              "value": "={{ (() => {\n  const raw = $json.output;\n  if (raw && typeof raw === 'object' && !Array.isArray(raw)) return raw;\n  const s = String(raw ?? '').trim()\n    .replace(/^\\`\\`\\`(?:json)?\\s*/i, '')\n    .replace(/\\`\\`\\`\\s*$/, '');\n  const parse = (text) => {\n    const value = JSON.parse(text);\n    return typeof value === 'string' ? JSON.parse(value) : value;\n  };\n  try { return parse(s); } catch {}\n  try { return parse(s.replace(/[\\r\\n\\t]/g, ' ')); } catch {}\n  return { accion: 'derivar', respuesta: '', fuente: 'ninguna' };\n})() }}",
-              "type": "object"
-            }
-          ]
-        },
+        "mode": "raw",
+        "jsonOutput": "={{ JSON.stringify({\n  decision_ia: (() => {\n    const raw = $json.output;\n    if (raw && typeof raw === 'object') return raw;\n    const s = String(raw ?? '').trim()\n      .replace(/^\\`\\`\\`(?:json)?\\s*/i, '')\n      .replace(/\\`\\`\\`\\s*$/, '');\n    try {\n      const parsed = JSON.parse(s);\n      return typeof parsed === 'string' ? JSON.parse(parsed) : parsed;\n    } catch {\n      return { accion: 'derivar', respuesta: '', fuente: 'ninguna' };\n    }\n  })()\n}) }}",
         "options": {}
       },
       "type": "n8n-nodes-base.set",
