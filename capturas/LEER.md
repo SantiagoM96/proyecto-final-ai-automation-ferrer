@@ -1,9 +1,11 @@
-# Capturas de la ejecución
+# Capturas reales de n8n — privacidad y evidencia
 
-Agregar aquí imágenes reales de:
+La exportación final del workflow contiene **58 nodos**. Para una presentación académica, las capturas recomendadas son:
 
-1. Canvas completo de los 57 nodos.
-2. Ejecución exitosa del recorrido Webhook → RAG → AI Agent → respuesta.
-3. Previsualización del brief, mostrando que la rama de Gmail no se ejecuta.
+1. **Canvas completo**, con las dos rutas visibles: conversación y brief.
+2. **Prueba 6 (RAG)**: salida del AI Agent o del nodo final, con HTTP 200, `accion: responder` y `fuente: RAG`.
+3. **Previsualización del brief**: rama `FIN - previsualización y envío bloqueado`, sin ejecutar Gmail.
 
-No publicar credenciales, nombres de personas, descripciones de tarjetas municipales ni datos privados. Las capturas no se generan artificialmente.
+**Estado:** no se publicaron capturas de pantalla en esta carpeta. Las capturas compartidas durante el desarrollo pueden exponer nombres, tareas y URLs internas municipales. Se deben recortar o anonimizar antes de subirlas a un repositorio público. No se deben generar capturas simuladas.
+
+La evidencia textual anonimizada de ejecuciones realizadas está en [tests/EVIDENCIAS-SANITIZADAS.md](../tests/EVIDENCIAS-SANITIZADAS.md). El diagrama real de arquitectura lógica está en [docs/ARQUITECTURA.md](../docs/ARQUITECTURA.md).
