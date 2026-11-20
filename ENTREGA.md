@@ -33,6 +33,6 @@ La **prueba 6** de RAG se revalidó en el workflow final y devolvió HTTP 200, `
 
 No se implementó la integración oficial de WhatsApp/Meta ni un despliegue HTTPS público. El Vector Store se reconstruye en memoria; las credenciales y el tablero real no están incluidos en el repositorio; Gmail **no se ejecutó realmente**. El ROI de 16 h 40 min/mes (83,33 %) es una proyección académica, no ahorro observado en producción.
 
-Las capturas publicadas son auténticas: se ocultó el cuerpo interno del brief por privacidad, y la imagen general del canvas está rotulada como versión previa. Las evidencias escritas son transcripciones resumidas de ejecuciones reales, no capturas fabricadas.
+Las capturas publicadas son auténticas y corresponden a la versión final: canvas de 58 nodos, brief con contenido interno oculto por privacidad y salida RAG exitosa (HTTP 200). Las evidencias escritas son transcripciones resumidas de ejecuciones reales, no capturas fabricadas.
 
 **La copia pública requiere reconfiguración y no fue ejecutada nuevamente después de anonimizarla.**

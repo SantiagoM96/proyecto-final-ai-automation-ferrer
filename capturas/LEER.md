@@ -1,27 +1,27 @@
-# Evidencias reales de n8n
+# Evidencias reales de n8n — versión definitiva
 
-Las siguientes imágenes proceden de capturas de pantalla **reales** compartidas durante las pruebas. No son recreaciones ni ejecuciones automáticas de GitHub.
+Las tres imágenes proceden de capturas **reales de la versión definitiva** compartidas por el autor. No se fabricaron ejecuciones ni resultados. La imagen del brief fue anonimizada antes de publicarla.
 
-## 1. Prueba de RAG — HTTP 200
+## 1. Canvas del workflow definitivo — 58 nodos
 
-![Resultado de la prueba 6: HTTP 200, accion responder, fuente RAG](prueba-6-rag.jpg)
+![Vista general del workflow definitivo de n8n, 58 nodos](workflow-definitivo-58-nodos.jpg)
 
-La captura corresponde a una ejecución del recorrido documental con `fuente: RAG`. La última versión se volvió a probar posteriormente con los mismos campos y HTTP 200; el texto de la respuesta puede variar entre ejecuciones.
+Se observan los tres disparadores (Webhook, Schedule y Manual Trigger), el circuito de lectura de Trello, el AI Agent con Ollama y RAG, el normalizador del JSON y la ruta de previsualización del brief. Esta captura **reemplaza la imagen anterior del canvas**, correspondiente a una etapa previa.
 
-## 2. Previsualización del brief — sin correo
+## 2. Prueba 6 — RAG con HTTP 200
 
-![Nodo FIN - previsualización y envío bloqueado con cobertura completa](previsualizacion-brief-anonimizada.jpg)
+![Ejecución real de prueba 6, HTTP 200, acción responder y fuente RAG](prueba-6-rag.jpg)
 
-Captura real del nodo `FIN - previsualización y envío bloqueado`, con `cobertura_completa: true` y `respaldo_deterministico: true`. **El cuerpo del correo fue ocultado deliberadamente** para proteger nombres, enlaces y detalles internos. No se envió Gmail en esta prueba.
+Pregunta: «¿Cuál es el procedimiento para preparar el brief diario?». Salida real: `accion: responder`, `fuente: RAG`, HTTP 200. La respuesta describe el procedimiento basado en las síntesis académicas del proyecto.
 
-## 3. Vista general del canvas (versión previa)
+## 3. Brief diario — previsualización sin Gmail
 
-![Canvas general de n8n durante el desarrollo](canvas-version-previa.jpg)
+![Nodo FIN de previsualización del brief, envío bloqueado](previsualizacion-brief-anonimizada.jpg)
 
-Captura del workflow **durante el desarrollo**, anterior a la última normalización JSON. **La exportación definitiva de 58 nodos**, en [workflow/asistente-trello-ollama-rag.json](../workflow/asistente-trello-ollama-rag.json), es la referencia estructural final.
+El nodo `FIN - previsualización y envío bloqueado` concluyó correctamente. Sus indicadores fueron `cobertura_completa: true` y `respaldo_deterministico: true`. **Se ocultó el cuerpo del correo** para evitar divulgar personas, tareas y enlaces de Trello. No se envió Gmail.
 
-## Privacidad y límites
+## Privacidad y alcance
 
-No publicar imágenes que contengan credenciales, claves, datos de personas, descripciones operativas municipales ni enlaces privados de Trello. Las capturas se muestran con alcance y etiquetas explícitas; no implican despliegue a Internet ni reemplazan la ejecución local reproducible.
+La captura del brief contiene una intervención de anonimización claramente indicada; los estados y los indicadores del nodo son de la ejecución real. La copia del workflow publicada en [workflow/](../workflow/asistente-trello-ollama-rag.json) omite credenciales y sustituye los IDs privados por marcadores.
 
-Para ver salidas resumidas y resultados adicionales: [tests/EVIDENCIAS-SANITIZADAS.md](../tests/EVIDENCIAS-SANITIZADAS.md).
+Las capturas **no implican** que WhatsApp/Meta esté integrado o que n8n esté desplegado en una URL pública. Ver también [resultados de pruebas](../tests/RESULTADOS-REALES.md) y [salidas de consola anonimizadas](../tests/EVIDENCIAS-SANITIZADAS.md).
