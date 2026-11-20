@@ -35,3 +35,11 @@ El workflow local se probó nuevamente con el parser estructurado nativo de n8n:
 **Brief en previsualización (revalidado):** 10 tarjetas, `cobertura_completa: true`, `respaldo_deterministico: true`. La ejecución finalizó por la rama que bloquea Gmail. No se envió ningún correo. Algunas descripciones quedaron recortadas al límite de caracteres del resumen, por lo que no equivale a un correo listo para uso productivo sin revisión.
 
 Las capturas de PowerShell y de n8n contienen información interna de tareas y responsables; **no se incluyen sin anonimización**. Los resultados anteriores corresponden a pruebas locales observadas, no a ejecución automática del JSON público anonimizado.
+
+## Cierre sobre la exportación definitiva — 19/11/2026
+
+La exportación final contiene **58 nodos** y reemplaza el parser estructurado inestable con un normalizador de JSON en un nodo `Code`. El último ensayo de **prueba 6** ejecutado sobre esta configuración devolvió **HTTP 200**, `accion: responder` y `fuente: RAG`, con una explicación coherente del procedimiento de preparación del brief diario.
+
+La **prueba 5** (escritura no autorizada) y la **prueba 9** (referencia ambigua) devolvieron **HTTP 200** con `derivar` y `aclarar`, respectivamente, sobre la arquitectura anterior al último ajuste del normalizador; **no se repitieron después de esa modificación puntual**. La rama de previsualización del brief fue probada previamente, sin enviar Gmail.
+
+La última versión fue exportada desde la instancia local. La versión del repositorio sustituye credenciales e IDs operativos por marcadores y **no fue ejecutada con esos valores anonimizados**. Las capturas de pruebas con nombres y detalles de tarjetas no se publican por confidencialidad.
