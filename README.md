@@ -1,5 +1,7 @@
 # Proyecto final — Asistente de seguimiento de Trello con Ollama y RAG
 
+[📦 Entrega y guía de evaluación](ENTREGA.md) · [🧭 Diagrama de arquitectura](docs/ARQUITECTURA.md) · [🧪 Pruebas reales](tests/RESULTADOS-REALES.md) · [📷 Capturas de n8n](capturas/LEER.md)
+
 **Curso:** AI Automation (Coderhouse)  
 **Alumno:** Santiago Ferrer  
 **Fecha de pruebas:** 19/11/2026  
@@ -366,7 +368,7 @@ Se generó un **brief de 10 tarjetas**, con `cobertura_completa: true` y `respal
 
 ## 9. Evidencias y limitaciones
 
-La carpeta `capturas/` explica qué capturas reales corresponden a cada recorrido y cómo anonimizar sus datos. **No se publicaron capturas con información interna de Trello**. El registro escrito de pruebas está en `tests/RESULTADOS-REALES.md`.
+La carpeta [capturas/](capturas/LEER.md) incluye **tres evidencias gráficas reales**: prueba RAG con HTTP 200, previsualización del brief con contenido interno oculto y una vista general del canvas marcada explícitamente como versión previa. No se publicaron nombres, detalles de tareas ni enlaces municipales en el cuerpo del correo. Las salidas de consola anonimizadas y los resultados escritos están en [tests/EVIDENCIAS-SANITIZADAS.md](tests/EVIDENCIAS-SANITIZADAS.md) y [tests/RESULTADOS-REALES.md](tests/RESULTADOS-REALES.md).
 
 **Limitaciones:** WhatsApp real/Meta no está integrado; el canal conversacional es un Webhook local simulado. El servidor no está publicado en una URL HTTPS externa. La base vectorial es de memoria, el brief probado fue una previsualización y el ahorro calculado es una estimación.
 
